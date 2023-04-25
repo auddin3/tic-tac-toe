@@ -46,6 +46,16 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
+.error label {
+  color: rgb(136, 2, 2);
+}
+
+.error input {
+  border-color: rgb(136, 2, 2);
+  color: rgb(136, 2, 2);
+  background-color: rgb(253, 219, 219);
+}
+
 #game-configuration h2 {
   font-size: 1rem;
   margin: 0.5rem 0;
