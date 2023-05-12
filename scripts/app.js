@@ -1,6 +1,6 @@
 // Core management of all the HTML elements
 
-const gameData = [
+let gameData = [
     [0, 0, 0],
     [0, 0, 0],
     [0, 0 ,0],
@@ -36,6 +36,7 @@ const editPlayer2Btn = document.getElementById('edit-player-2-btn')
 const cancelConfigBtn = document.getElementById('cancel-config-btn')
 const startNewGameBtn = document.getElementById('start-game-btn') 
 const gameFieldElements = document.querySelectorAll('#game-board li')
+const gameBoardElement = document.getElementById('game-board');
 
 editPlayer1Btn.addEventListener('click', openPlayerConfig)
 editPlayer2Btn.addEventListener('click', openPlayerConfig)

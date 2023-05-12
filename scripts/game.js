@@ -1,7 +1,7 @@
 function resetGameStatus() {
     activePlayer = 0
     currentRound = 1
-    gameOver = false
+    gameIsOver = false
     gameOver.firstElementChild.innerHTML = 
     'You won, <span id="winner-name">PLAYER NAME</span>!'
     gameOver.style.display = "none"
@@ -10,10 +10,10 @@ function resetGameStatus() {
 
     for (let i=0; i<3; i++) {
         for (let j=0; j<3; j++){
-            gameDate[i][j] = 0
-            const gameAreaItem = gameAreaElement.children[gameBoardIndex]
-            gameAreaElement.children[gameBoardIndex].textContent = ''
-            gameAreaItem.classList.remove('disabled')
+            gameData[i][j] = 0
+            const gameBoardItem = gameBoardElement.children[gameBoardIndex]
+            gameBoardItem.textContent = ''
+            gameBoardItem.classList.remove('disabled')
             gameBoardIndex++
         }
     }
@@ -74,7 +74,7 @@ function switchPlayer() {
 }
 
 function selectGameField(event) {
-    if (event.target.tagName !== 'LI' || gameOver) return
+    if (event.target.tagName !== 'LI' || gameIsOver) return
 
     const selectedField = event.target
 
@@ -84,7 +84,7 @@ function selectGameField(event) {
     if (gameData[selectedRow][selectedColumn] > 0) return 
 
     selectedField.textContent = players[activePlayer].symbol
-    selectedField.target.classList.add('disabled')
+    selectedField.classList.add('disabled')
 
     gameData[selectedRow][selectedColumn] = activePlayer + 1
 
