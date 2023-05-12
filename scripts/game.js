@@ -1,8 +1,31 @@
+function resetGameStatus() {
+    activePlayer = 0
+    currentRound = 1
+    gameOver = false
+    gameOver.firstElementChild.innerHTML = 
+    'You won, <span id="winner-name">PLAYER NAME</span>!'
+    gameOver.style.display = "none"
+
+    let gameBoardIndex = 0
+
+    for (let i=0; i<3; i++) {
+        for (let j=0; j<3; j++){
+            gameDate[i][j] = 0
+            const gameAreaItem = gameAreaElement.children[gameBoardIndex]
+            gameAreaElement.children[gameBoardIndex].textContent = ''
+            gameAreaItem.classList.remove('disabled')
+            gameBoardIndex++
+        }
+    }
+}
+
 function startNewGame () {
     if (players[0].name === '' || players[1].name === '') {
         alert('Please set custom player names for both players!')
         return;
     }
+
+    resetGameStatus()
 
     activePlayerName.textContent = players[activePlayer].name
     gameAreaElement.style.display = "block"
@@ -51,7 +74,7 @@ function switchPlayer() {
 }
 
 function selectGameField(event) {
-    if (event.target.tagName !== 'LI') return
+    if (event.target.tagName !== 'LI' || gameOver) return
 
     const selectedField = event.target
 
@@ -67,6 +90,21 @@ function selectGameField(event) {
 
     const winnerId = checkForGameOver()
 
+    if (winnerId !== 0) endGame(winnerId)
+
     currentRound++
     switchPlayer() 
+}
+
+function endGame(winnerId) {
+    gameIsOver = true
+    gameOver.style.display = 'block'
+
+    if (winnerId > 0) {
+        const winnerName = players[winnerId - 1].name;
+        gameOver.firstElementChild.firstElementChild.textContent = winnerName
+    } else {
+        gameOver.firstElementChild.textContent = 'It\'s a draw!'
+    }
+    
 }
