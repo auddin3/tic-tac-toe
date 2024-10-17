@@ -37,3 +37,30 @@ body {
   background-color: rgb(230, 201, 252);
   border-color: transparent;
 }
+
+#btn:hover {
+  background-color: #a533ff; /* Lighten the button on hover */
+  box-shadow: 0px 4px 10px rgba(140, 0, 255, 0.5); /* Add subtle shadow */
+}
+
+#btn:active {
+  background-color: #7200cc; /* Darken the button when active (clicked) */
+  box-shadow: 0px 2px 5px rgba(140, 0, 255, 0.3); /* Reduce shadow when clicked */
+}
+
+#toggle-mode-btn {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  background-color: white; /* White background */
+  border: 1px solid rgb(140, 0, 255); /* Purple border */
+  color: rgb(140, 0, 255); /* Purple text */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  margin-right: 20px
+}
+
+#toggle-mode-btn:hover {
+  background-color: #a533ff; /* Purple background on hover */
+  color: white; /* White text on hover */
+}

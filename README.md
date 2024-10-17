@@ -67,8 +67,7 @@ tic-tac-toe/
 ## Future Enhancements
 
 Here are some ideas for potential future improvements:
-- Add a **single-player mode** with AI (computer opponent).
-- Implement difficulty levels (easy, medium, hard) for the AI.
+- Implement difficulty levels (easy, medium, hard) for the **single-player mode** with AI (AI opponent).
 - Add animations for player moves or winning sequences.
 - Create a mobile-friendly, responsive design.
 - Track player scores across multiple games.
