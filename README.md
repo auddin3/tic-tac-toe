@@ -50,8 +50,8 @@ To run this game locally, follow these steps:
 tic-tac-toe/
 │
 ├── index.html         # The main HTML file
-├── style.css          # Styles for the game board and layout
-└── script.js          # JavaScript logic for game functionality
+├── styles             # Styles for the game board and layout
+└── scripts            # JavaScript logic for game functionality
 ```
 
 - **index.html**: Contains the structure of the game board and interface.
