@@ -13,7 +13,7 @@ Welcome to the **Tic-Tac-Toe** game! This is a simple implementation of the clas
 
 ## Features
 
-- Two-player mode (Player X and Player O)
+- Two-player mode (Player X and Player O) or Single-Player mode with AI 
 - Dynamic game board updates after each move
 - Highlights the winning combination when a player wins
 - Displays a message for the winner or a tie (draw)
